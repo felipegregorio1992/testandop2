@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # Serviço para cadastrar vídeos - Node.js
+  nodejs_cadastrar_video:
+    build:
+      context: /cadastrar_video/cadastra_video_node
+    ports:
+      - '5001:5001'
+    volumes:
+      - /cadastrar_video/cadastra_video_node
+    command: npm start
+
+  # Serviço para cadastrar vídeos - React
+  react_cadastrar_video:
+    build:
+      context: /cadastrar_video/cadastra_video_react
+    ports:
+      - '3001:3001'
+    volumes:
+      - /cadastrar_video/cadastra_video_react
+    command: npm start
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
+  # Serviço de login - Node.js
+  nodejs_login:
+    build:
+      context: /login/Node
+    ports:
+      - '5000:5000'
+    volumes:
+      - /login/Node
+    command: npm start
+
+  # Serviço de login - React
+  react_login:
+    build:
+      context: /login/app
+    ports:
+      - '3000:3000'
+    volumes:
+      - /login/app
+    command: npm start
+    environment:
+      - CHOKIDAR_USEPOLLING=true

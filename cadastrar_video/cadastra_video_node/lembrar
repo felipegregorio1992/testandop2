@@ -1,0 +1,26 @@
+plublic key
+APP_USR-9abe8f32-3ad2-4e17-a96e-3b9897713941
+
+access token
+APP_USR-7805514295653657-111613-6c0665b88e63eac7981b000ba7c421e2-454024990
+
+cliente id
+7805514295653657
+
+Client Secret
+o3bvNCMTUfQVwtIZVO85eWueAoSH8fVM
+
+
+Credenciais de teste
+
+Public Key
+TEST-2a8c86db-4fb1-45ed-85af-8618bfb5b538
+
+Access Token
+TEST-7805514295653657-111613-9b3b3ce1c4e39423b8f32ac9dd48c130-454024990
+
+
+const pag = new pagseguro({
+  email: 'sample@uol.com',
+  token: 'DX98D6DE3D724489883F3D1F24ED8EDA',
+});
